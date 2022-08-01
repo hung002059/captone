@@ -1,0 +1,16 @@
+#movies_detail{
+   button{
+      color: $text_color_3;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 5px 40px;
+      border: 5px solid;
+      border-image-slice: 1;
+      border-width: 5px;
+      border-image-source: linear-gradient(to right,$bg_color_1,$bg_color_2);
+      &:hover{
+         transition: all 1s;
+         @include setButtonHover($bg_color_1,$bg_color_2,$text_color_1,$direc_left);
+      }
+   }
+}
