@@ -1,0 +1,19 @@
+#header{
+   button{
+      font-size: 30px;
+   }
+   .cart{
+      button{
+         border-radius: 10px;
+         i{
+            position: relative;
+         }
+      }
+      .quantity_cart{
+         position: absolute;
+         span{
+            font-weight: 400;
+         }
+      }
+   }
+}

@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+#header button {
+  font-size: 30px;
+}
+#header .cart button {
+  border-radius: 10px;
+}
+#header .cart button i {
+  position: relative;
+}
+#header .cart .quantity_cart {
+  position: absolute;
+}
+#header .cart .quantity_cart span {
+  font-weight: 400;
+}
+
+#listMovies .title .nav .nav-item .nav-link {
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+}
+#listMovies .title .nav .nav-item .nav-link::after {
+  content: "";
+  width: 0;
+  display: block;
+  height: 3.5px;
+  background-image: linear-gradient(to right, red, blue);
+  transition: all 0.2s;
+}
+#listMovies .title .nav .nav-item .nav-link.active {
+  transition: all 0.2s;
+  font-weight: 800;
+}
+#listMovies .title .nav .nav-item .nav-link.active::after {
+  width: 100%;
+}
+#listMovies .title .cart i {
+  font-size: 40px;
+}
+#listMovies .card {
+  border: 0px;
+}
+#listMovies .card img {
+  height: 400px;
+}
+#listMovies .card .card-header {
+  position: relative;
+}
+#listMovies .card .card-header:hover .card-hover {
+  opacity: 1;
+}
+#listMovies .card .card-header:hover .card-hover button:hover {
+  transition: all 1s;
+  background: linear-gradient(to left, red, blue);
+  color: white;
+  color: white;
+  padding: 10px 40px;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, red, blue);
+}
+#listMovies .card .card-hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+}
+#listMovies .card .card-hover button {
+  color: red;
+  padding: 10px 40px;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, red, blue);
+}/*# sourceMappingURL=main.css.map */

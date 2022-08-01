@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captone Team 7</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Style -->
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header" class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="./home.html"
+          ><img class="w-75" src="./logo.png" alt="image"
+        /></a>
+
+        <!-- Login -->
+        <div class="header_Login ml-auto">
+          <button
+            type="button"
+            id="btnLogin"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            Login
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- register-form -->
+    <div id="registerForm" class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Đăng Nhập</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <table class="table text-center row">
+              <!-- user-name -->
+              <div class="form-group">
+                <label for="">Tài Khoản</label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder="User Name"
+                />
+                <small id="helpId" class="form-text text-danger"
+                  >Validation</small
+                >
+              </div>
+              <!-- password -->
+              <div class="form-group">
+                <label for="">Mật Khẩu</label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder="Password"
+                />
+                <small id="helpId" class="form-text text-danger"
+                  >Validation</small
+                >
+              </div>
+              <!-- SĐT -->
+              <div class="form-group">
+                <label for="">SĐT</label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder="SĐT"
+                />
+                <small id="helpId" class="form-text text-danger"
+                  >Validation</small
+                >
+              </div>
+              <!-- Email -->
+              <div class="form-group">
+                <label for="">Email</label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder="Email"
+                />
+                <small id="helpId" class="form-text text-danger"
+                  >Validation</small
+                >
+              </div>
+            </table>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer m-auto"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- list-movies -->
+    <div id="listMovies" class="container pt-5">
+      <!-- Click to show list movies -->
+      <div class="title row">
+        <ul
+          class="nav nav-pills justify-content-center col-sm-12 col-md-12 col-lg-6 col-xl-6"
+          role="tablist"
+        >
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#phimHot"
+              >Phim Hot</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#phimDangChieu"
+              >Phim đang chiếu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#movies">Còn lại</a>
+          </li>
+        </ul>
+
+        <!-- search-movies -->
+        <div
+          class="searchMovies m-sm-auto col-sm-12 col-md-12 col-lg-6 col-xl-6"
+        >
+          <div class="search_cart row">
+            <div class="search col-sm-9 col-md-9">
+              <a class="nav-link"
+                ><form class="form-inline justify-content-center row">
+                  <input
+                    class="form-control mr-2 col-7"
+                    type="text"
+                    placeholder="Search"
+                  />
+                  <button class="btn btn-success col-3" type="submit">
+                    Search
+                  </button>
+                </form></a
+              >
+            </div>
+
+            <!-- Cart -->
+            <div class="cart mr-sm-2 col-sm-2 col-md-2 col-lg-2">
+              <button
+                type="button"
+                id="btnCart"
+                class="btn"
+                data-toggle="modal"
+                data-target="#myModal"
+              >
+                <i class="fas fa-shopping-cart text-info"></i>
+              </button>
+              <!-- <span class="quantity_cart">123</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Show list movies -->
+      <div class="movies tab-content pt-4">
+        <!-- phim hot -->
+        <div id="phimHot" class="container tab-pane active">
+          <div class="row">
+            <div class="card_overlay col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card_img img-fluid w-100"
+                    src="./avatar-3_gp01.jpg"
+                    alt=""
+                  />
+                  <div class="card-hover">
+                    <button type="submit" class="btn">Xem Chi tiết</button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="card_overlay col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card_img img-fluid w-100"
+                    src="./lightyear12_gp01.jpg"
+                    alt=""
+                  />
+                  <div class="card-hover">
+                    <button type="submit" class="btn">Xem Chi tiết</button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="card_overlay col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card_img img-fluid w-100"
+                    src="./thor-tinh-yeu-va-sam-set_gp01.jpg"
+                    alt=""
+                  />
+                  <div class="card-hover">
+                    <button type="submit" class="btn">Xem Chi tiết</button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- đang chiếu -->
+        <div id="phimDangChieu" class="container tab-pane fade">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="img-fluid w-100"
+                    src="./thor-tinh-yeu-va-sam-set_gp01.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="img-fluid w-100"
+                    src="./one-piece-red_gp01.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="img-fluid w-100"
+                    src="./avatar-3_gp01.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- còn lại -->
+        <div id="movies" class="container tab-pane fade">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="img-fluid w-100"
+                    src="./thor-tinh-yeu-va-sam-set_gp01.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="img-fluid w-100"
+                    src="./avatar-3_gp01.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="img-fluid w-100"
+                    src="./one-piece-red_gp01.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title d-flex justify-content-center">
+                    Tên phim
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- movie-detail -->
+    <!-- <div class="movies_layout row">
+      <div class="movies_images col-lg-4 col-6 col-sm-12">
+        <img class="w-100 h-100" src="./avatar-3_gp01.jpg" />
+      </div>
+      <div class="movies_content col-lg-8 col-6 col-sm-12">
+        <div class="content_title">
+          <h3 class="movie_name">Tên phim</h3>
+          <p class="movie_decript">Giới thiệu</p>
+          <p class="movie_point">Đánh giá</p>
+          <p class="ngayChieu">Ngày chiếu</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
