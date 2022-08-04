@@ -8,18 +8,17 @@
 }
 
 #header button {
-  font-size: 30px;
+  font-size: 25px;
 }
 #header .cart button {
   border-radius: 10px;
-}
-#header .cart button i {
   position: relative;
 }
-#header .cart .quantity_cart {
-  position: absolute;
+#header .cart button i {
+  font-size: 40px;
 }
 #header .cart .quantity_cart span {
+  position: absolute;
   font-weight: 400;
 }
 
@@ -45,14 +44,6 @@
 }
 #listMovies .title .nav .nav-item .nav-link.active::after {
   width: 100%;
-}
-#listMovies .title .cart i {
-  position: relative;
-  font-size: 40px;
-}
-#listMovies .title .cart span {
-  position: absolute;
-  color: white;
 }
 #listMovies .card {
   border: 0px;

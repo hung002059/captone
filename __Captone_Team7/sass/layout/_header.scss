@@ -1,17 +1,18 @@
 #header{
    button{
-      font-size: 30px;
+      font-size: 25px;
    }
    .cart{
       button{
          border-radius: 10px;
+         position: relative;
          i{
-            position: relative;
+            font-size: 40px;
          }
       }
       .quantity_cart{
-         position: absolute;
          span{
+            position: absolute;
             font-weight: 400;
          }
       }

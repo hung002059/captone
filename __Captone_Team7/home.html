@@ -37,107 +37,184 @@
           ><img class="w-75" src="./logo.png" alt="image"
         /></a>
 
-        <!-- Login -->
-        <div class="header_Login ml-auto">
-          <button
-            type="button"
-            id="btnLogin"
-            class="btn btn-secondary"
-            data-toggle="modal"
-            data-target="#myModal"
-          >
-            Login
-          </button>
+        <div class="header_icon row">
+          <!-- Cart -->
+          <div class="cart p-0">
+            <div class="w-100">
+              <button
+                type="button"
+                class="btn"
+                data-toggle="modal"
+                data-target="#myModal"
+              >
+                <i class="fas fa-shopping-cart text-success"></i>
+                <!-- <span class="quantity_cart">123</span> -->
+              </button>
+            </div>
+          </div>
+
+          <!-- Login -->
+          <div class="header_cart ml-auto">
+            <button
+              type="button"
+              name=""
+              id="btnGioHang"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#modelId"
+            >
+              Login
+            </button>
+          </div>
         </div>
       </nav>
     </div>
 
     <!-- register-form -->
-    <div id="registerForm" class="modal fade" id="myModal">
-      <div class="modal-dialog">
+    <div id="registerForm">
+      <div
+        class="modal fade"
+        id="modelId"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modelTitleId"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+              <h5 class="modal-title">Đăng nhập</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+              <table class="table text-center row">
+                <!-- user-name -->
+                <div class="form-group">
+                  <label for="">Tài Khoản</label>
+                  <input
+                    type="text"
+                    class="form-control w-75"
+                    name=""
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder="User Name"
+                  />
+                  <small id="helpId" class="form-text text-danger"
+                    >Validation</small
+                  >
+                </div>
+                <!-- password -->
+                <div class="form-group">
+                  <label for="">Mật Khẩu</label>
+                  <input
+                    type="text"
+                    class="form-control w-75"
+                    name=""
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder="Password"
+                  />
+                  <small id="helpId" class="form-text text-danger"
+                    >Validation</small
+                  >
+                </div>
+                <!-- SĐT -->
+                <div class="form-group">
+                  <label for="">SĐT</label>
+                  <input
+                    type="text"
+                    class="form-control w-75"
+                    name=""
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder="SĐT"
+                  />
+                  <small id="helpId" class="form-text text-danger"
+                    >Validation</small
+                  >
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input
+                    type="text"
+                    class="form-control w-75"
+                    name=""
+                    id=""
+                    aria-describedby="helpId"
+                    placeholder="Email"
+                  />
+                  <small id="helpId" class="form-text text-danger"
+                    >Validation</small
+                  >
+                </div>
+              </table>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cart-form -->
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Đăng Nhập</h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
+            <h4 class="modal-title">This is Modal</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <!-- Modal body -->
           <div class="modal-body">
-            <table class="table text-center row">
-              <!-- user-name -->
-              <div class="form-group">
-                <label for="">Tài Khoản</label>
-                <input
-                  type="text"
-                  class="form-control w-75"
-                  name=""
-                  id=""
-                  aria-describedby="helpId"
-                  placeholder="User Name"
-                />
-                <small id="helpId" class="form-text text-danger"
-                  >Validation</small
-                >
-              </div>
-              <!-- password -->
-              <div class="form-group">
-                <label for="">Mật Khẩu</label>
-                <input
-                  type="text"
-                  class="form-control w-75"
-                  name=""
-                  id=""
-                  aria-describedby="helpId"
-                  placeholder="Password"
-                />
-                <small id="helpId" class="form-text text-danger"
-                  >Validation</small
-                >
-              </div>
-              <!-- SĐT -->
-              <div class="form-group">
-                <label for="">SĐT</label>
-                <input
-                  type="text"
-                  class="form-control w-75"
-                  name=""
-                  id=""
-                  aria-describedby="helpId"
-                  placeholder="SĐT"
-                />
-                <small id="helpId" class="form-text text-danger"
-                  >Validation</small
-                >
-              </div>
-              <!-- Email -->
-              <div class="form-group">
-                <label for="">Email</label>
-                <input
-                  type="text"
-                  class="form-control w-75"
-                  name=""
-                  id=""
-                  aria-describedby="helpId"
-                  placeholder="Email"
-                />
-                <small id="helpId" class="form-text text-danger"
-                  >Validation</small
-                >
-              </div>
+            <table class="table text-center">
+              <thead>
+                <tr>
+                  <th>Tên KH</th>
+                  <th>Tên Phim</th>
+                  <th>Ghế</th>
+                  <th>Tổng tiền</th>
+                </tr>
+              </thead>
+              <tbody id="cartBody"></tbody>
             </table>
           </div>
-          <!-- Modal footer -->
-          <div class="modal-footer m-auto"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Thanh toán</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- list-movies -->
-    <div id="listMovies" class="container pt-5">
+    <div id="listMovies" class="pt-5">
       <!-- Click to show list movies -->
-      <div class="title row">
+      <div class="title bg-dark row">
         <ul
           class="nav nav-pills justify-content-center col-sm-12 col-md-12 col-lg-6 col-xl-6"
           role="tablist"
@@ -157,11 +234,10 @@
           </li>
         </ul>
 
-        <!-- search-movies -->
-        <div
-          class="searchMovies m-sm-auto col-sm-12 col-md-12 col-lg-6 col-xl-6"
-        >
-          <div class="search_cart row">
+        <!-- search-cart -->
+        <div class="m-sm-auto col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="search_content">
+            <!-- search -->
             <div class="search col-sm-9 col-md-9">
               <a class="nav-link"
                 ><form class="form-inline justify-content-center row">
@@ -175,20 +251,6 @@
                   </button>
                 </form></a
               >
-            </div>
-
-            <!-- Cart -->
-            <div class="cart mr-sm-2 col-sm-2 col-md-2 col-lg-2">
-              <button
-                type="button"
-                id="btnCart"
-                class="btn"
-                data-toggle="modal"
-                data-target="#myModal"
-              >
-                <i class="fas fa-shopping-cart text-info"></i>
-              </button>
-              <!-- <span class="quantity_cart">123</span> -->
             </div>
           </div>
         </div>
@@ -368,22 +430,169 @@
     </div>
 
     <!-- Footer -->
-    <div id="footer"></div>
-
-    <!-- movie-detail -->
-    <!-- <div class="movies_layout row">
-      <div class="movies_images col-lg-4 col-6 col-sm-12">
-        <img class="w-100 h-100" src="./avatar-3_gp01.jpg" />
-      </div>
-      <div class="movies_content col-lg-8 col-6 col-sm-12">
-        <div class="content_title">
-          <h3 class="movie_name">Tên phim</h3>
-          <p class="movie_decript">Giới thiệu</p>
-          <p class="movie_point">Đánh giá</p>
-          <p class="ngayChieu">Ngày chiếu</p>
+    <div id="footer" class="bg-dark">
+      <div class="container">
+        <div class="footer_content row">
+          <div
+            class="footer_introduce content col-sm-6 col-md-6 col-lg-3 col-xl-3"
+          >
+            <div class="footer_title">
+              <h4>Giới thiệu</h4>
+            </div>
+            <div class="introduce_content">
+              <div class="about">
+                <a href="#">Cinema</a>
+              </div>
+              <div class="rules">
+                <a href="#">Điều khoản</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="footer_contact content col-sm-6 col-md-6 col-lg-3 col-xl-3"
+          >
+            <div class="cinema">
+              <div class="footer_title">
+                <h4>Kết nối với cinema</h4>
+              </div>
+              <div class="cinema_content">
+                <div class="facebook">
+                  <a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </div>
+                <div class="youtube">
+                  <a href="#">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+                <div class="twitter">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="app pt-3">
+              <div class="footer_title">
+                <h4>Dowload App</h4>
+              </div>
+              <div class="app_content">
+                <div class="apple_store">
+                  <a href="#">
+                    <i class="fab fa-app-store-ios"></i>
+                  </a>
+                </div>
+                <div class="ch_play">
+                  <a href="#">
+                    <i class="fab fa-google-play"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="footer_service content col-sm-6 col-md-6 col-lg-3 col-xl-3"
+          >
+            <div class="footer_title">
+              <h4>Kết nối với cinema</h4>
+            </div>
+            <div class="service_content pt-3">
+              <div class="hotline"><p>Hotline:123456</p></div>
+              <div class="working"><p>Giờ làm việc: 8:00 - 22:00</p></div>
+              <div class="email">
+                <p>Email: <a href="#">123@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="footer_support content col-sm-6 col-md-6 col-lg-3 col-xl-3"
+          >
+            <div class="footer_title">
+              <h4>Hỗ trợ</h4>
+            </div>
+            <div class="support_content pt-3">
+              <div class="feedback"><p>Feedback:12345@gmail.com</p></div>
+              <div class="recruit"><p>Tuyển dụng: abcxyz@gmail.com</p></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
+
+    <!-- movie-detail -->
+    <div id="movies_detail">
+      <div class="movies_detail container">
+        <div class="movies_layout row">
+          <div class="movies_images col-lg-4 col-6 col-sm-12">
+            <img class="w-100 h-100" src="./avatar-3_gp01.jpg" />
+          </div>
+          <div class="movies_content container col-lg-8 col-6 col-sm-12">
+            <div class="content_title">
+              <h1 class="movie_name">Tên phim</h1>
+              <p class="movie_decript">Giới thiệu</p>
+              <p class="movie_point">Đánh giá(điểm)</p>
+              <p class="ngayChieu">Ngày chiếu</p>
+              <div class="btnTrailer">
+                <button class="btn">Trailer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="movie_details pt-5">
+          <div class="details_content">
+            <div class="content_header row">
+              <h2 class="col-5">Nội dung phim</h2>
+            </div>
+            <div class="content_descript">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Eligendi ab nam architecto commodi beatae in nesciunt non eum,
+                voluptatibus placeat!
+              </p>
+            </div>
+          </div>
+          <div class="details_lichChieu">
+            <div class="content_header row">
+              <h2 class="col-5">Lịch chiếu</h2>
+            </div>
+            <div class="lichChieu_input">
+              <div class="input_date row">
+                <div class="form-group col-6">
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="input_Rap col-6">
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option>Tất cả rạp</option>
+                      <option>TP.HCM</option>
+                      <option>Hà Nội</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="RapPhim container">
+              <div class="RapPhim_header row">
+                <h4 class="col-6 m-0">Rạp phim</h4>
+              </div>
+              <div class="RapPhim_contennt">
+                <div class="content_border row">
+                  <!-- Ghế -->
+                  <div class="border_button row col-sm-12 col-md-12 col-lg-8">
+                    <button
+                      class="mt-1 col-sm-2 col-md-2 col-lg-1 col-xl-1 btn btn-danger"
+                    >
+                      12:00
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

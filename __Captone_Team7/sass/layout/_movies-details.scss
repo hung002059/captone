@@ -1,4 +1,5 @@
 #movies_detail{
+   .movies_layout{
    button{
       color: $text_color_3;
       font-weight: 700;
@@ -13,4 +14,42 @@
          @include setButtonHover($bg_color_1,$bg_color_2,$text_color_1,$direc_left);
       }
    }
+   }
+   .content_header{
+      h2{
+         padding: 5px 15px;
+         color: black;
+         border-bottom: 5px solid;
+         border-image-slice: 1;
+         border-width: 5px;
+         border-image-source: linear-gradient(to right,$bg_color_1,$bg_color_2);
+      }  
+   }
+   .details_lichChieu{
+      padding: 2rem 0px;
+      .RapPhim{
+      padding: 20px 0px;
+      .RapPhim_header{
+         h4{
+            padding: 10px;
+            color: white;
+            @include setGradien($bg_color_1,$bg_color_2,$direc_right);
+         }
+         border-left: 5px solid black;
+      }
+      .RapPhim_contennt{
+         .border_button{
+            margin-left: 0;
+            border: 1px solid #a0a3a7;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+            button{
+               margin: 0 0.5rem;
+            }
+         }
+      }
+   }
+   }
+   
 }
