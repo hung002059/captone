@@ -30,46 +30,42 @@
   </head>
   <body>
     <!-- Header -->
-    <div id="header" class="container">
-      <nav class="navbar navbar-expand-sm navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="./home.html"
-          ><img class="w-75" src="./logo.png" alt="image"
-        /></a>
 
-        <div class="header_icon row">
-          <!-- Cart -->
-          <div class="cart p-0">
-            <div class="w-100">
-              <button
-                type="button"
-                class="btn"
+    <div id="header" class="py-5">
+      <div class="header_logo">
+        <a href="#">
+          <img class="img-fluid h-100" src="./logo.png" alt="" />
+        </a>
+      </div>
+      <div class="header_nav pt-3">
+        <nav class="navbar navbar-expand-sm justify-content-around">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
                 data-toggle="modal"
                 data-target="#myModal"
+                >Vé của tôi (1234)</a
               >
-                <i class="fas fa-shopping-cart text-success"></i>
-                <!-- <span class="quantity_cart">123</span> -->
-              </button>
-            </div>
-          </div>
-
-          <!-- Login -->
-          <div class="header_cart ml-auto">
-            <button
-              type="button"
-              name=""
-              id="btnGioHang"
-              class="btn btn-danger"
-              data-toggle="modal"
-              data-target="#modelId"
-            >
-              Login
-            </button>
-          </div>
-        </div>
-      </nav>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a class="nav-link dropbtn">Đăng nhập</a>
+                <div class="dropdown-content">
+                  <a href="#" data-toggle="modal" data-target="#modelId"
+                    >Customer</a
+                  >
+                  <a href="#" data-toggle="modal" data-target="#LoginAdmin"
+                    >Admin</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-
     <!-- register-form -->
     <div id="registerForm">
       <div
@@ -84,7 +80,7 @@
           <div class="modal-content">
             <!-- Modal header -->
             <div class="modal-header">
-              <h5 class="modal-title">Đăng nhập</h5>
+              <h5 class="modal-title">Đăng nhập Khách hàng</h5>
               <button
                 type="button"
                 class="close"
@@ -96,7 +92,7 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-              <table class="table text-center row">
+              <form>
                 <!-- user-name -->
                 <div class="form-group">
                   <label for="">Tài Khoản</label>
@@ -157,31 +153,31 @@
                     >Validation</small
                   >
                 </div>
-              </table>
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">Save</button>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Save</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- cart-form -->
-
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <!-- Login-admin -->
+    <div id="LoginAdmin" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">This is Modal</h4>
+            <h4 class="modal-title">Đăng nhập Admin</h4>
             <button
               type="button"
               class="close"
@@ -192,27 +188,75 @@
             </button>
           </div>
           <div class="modal-body">
-            <table class="table text-center">
-              <thead>
-                <tr>
-                  <th>Tên KH</th>
-                  <th>Tên Phim</th>
-                  <th>Ghế</th>
-                  <th>Tổng tiền</th>
-                </tr>
-              </thead>
-              <tbody id="cartBody"></tbody>
-            </table>
+            <div class="form-group">
+              <form>
+                <label>Tài khoản</label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+                <label>Mật khẩu</label>
+                <input
+                  type="text"
+                  class="form-control w-75"
+                  name="password"
+                  id="password"
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+                <button type="button" class="btn btn-primary">Login</button>
+              </form>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Thanh toán</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- cart-form -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Vé của tôi</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <table class="table text-center">
+                <thead>
+                  <tr>
+                    <th>Tên KH</th>
+                    <th>Tên Phim</th>
+                    <th>Ghế</th>
+                    <th>Tổng tiền</th>
+                  </tr>
+                </thead>
+                <tbody id="cartBody"></tbody>
+              </table>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">
+                  Thanh toán
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
     <!-- list-movies -->
-    <div id="listMovies" class="pt-5">
+    <div id="listMovies">
       <!-- Click to show list movies -->
       <div class="title bg-dark row">
         <ul
