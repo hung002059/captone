@@ -98,7 +98,7 @@
   border-image-source: linear-gradient(to right, red, blue);
 }
 
-#movies_detail button {
+#movies_detail .movies_layout button {
   color: black;
   font-weight: 700;
   font-size: 17px;
@@ -108,7 +108,7 @@
   border-width: 5px;
   border-image-source: linear-gradient(to right, red, blue);
 }
-#movies_detail button:hover {
+#movies_detail .movies_layout button:hover {
   transition: all 1s;
   background: linear-gradient(to left, red, blue);
   color: white;
@@ -119,12 +119,47 @@
   border-width: 5px;
   border-image-source: linear-gradient(to left, red, blue);
 }
+#movies_detail .content_header h2 {
+  padding: 5px 15px;
+  color: black;
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, red, blue);
+}
+#movies_detail .details_lichChieu {
+  padding: 2rem 0px;
+}
+#movies_detail .details_lichChieu .RapPhim {
+  padding: 20px 0px;
+}
+#movies_detail .details_lichChieu .RapPhim .RapPhim_header {
+  border-left: 5px solid black;
+}
+#movies_detail .details_lichChieu .RapPhim .RapPhim_header h4 {
+  padding: 10px;
+  color: white;
+  background-image: linear-gradient(to right, red, blue);
+}
+#movies_detail .details_lichChieu .RapPhim .RapPhim_contennt .border_button {
+  margin-left: 0;
+  border: 1px solid #a0a3a7;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+#movies_detail .details_lichChieu .RapPhim .RapPhim_contennt .border_button button {
+  margin: 0 0.5rem;
+}
 
 #footer {
   padding: 50px 0px;
 }
 #footer .footer_title {
-  border-left: 5px solid red;
+  border-left: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to bottom, red, blue);
 }
 #footer .footer_title h4 {
   color: #858383;
